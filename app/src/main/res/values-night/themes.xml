@@ -1,0 +1,74 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MovieApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pink</item>
+        <item name="colorSecondaryVariant">@color/pink</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Details activity theme. -->
+    <style name="Theme.DetailsActivity" parent="Theme.MaterialComponents">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pink</item>
+        <item name="colorSecondaryVariant">@color/pink</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="navigationIcon">@drawable/ic_back</item>
+        <item name="actionBarStyle">@style/DetailsActionBar</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+
+    <!-- TEXT -->
+    <style name="CustomTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="RecyclerViewTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_rv_title</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxWidth">@dimen/rv_title_max_width</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">@dimen/margin_rv_small</item>
+    </style>
+
+    <style name="SmallText.Light">
+        <item name="android:textColor">@color/silver</item>
+    </style>
+    <style name="SmallText.Bright">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- BOX -->
+    <style name="DefaultTextInputLayout.Colored">
+        <item name="android:textColorHint">@color/silver</item>
+        <item name="startIconTint">@color/silver</item>
+        <item name="hintTextColor">@color/grey</item>
+    </style>
+
+</resources>

@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdk project.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.example.moviesapptermpaper"
+        minSdk project.minSdkVersion
+        targetSdk project.compileSdkVersion
+        versionCode project.appVersionCode
+        versionName project.appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = project.jvmTargetVersion
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:$androidxCoreVersion"
+    implementation "androidx.appcompat:appcompat:$androidxAppCompat"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupport"
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$testExtJunitVersion"
+
+    // Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:$testEspressoVersion"
+    // Ui Automator
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:$testUiAutomatorVersion")
+
+    // by viewModels delegate
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+
+    // Leak Canary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+
+    // RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjavaAndroidVersion"
+    // RxBinding
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxbindingVersion"
+
+    // WorkManager
+    implementation "androidx.work:work-runtime-ktx:$workManagerVersion"
+
+    // Firebase BoM
+    implementation platform("com.google.firebase:firebase-bom:$firebaseBoom")
+    //Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    // Firebase Messaging
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    // Firebase crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    // including modules
+    implementation project(path: ':data')
+}
+
+// allow references to generate code
+kapt {
+    correctErrorTypes true
+}

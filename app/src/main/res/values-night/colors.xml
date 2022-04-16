@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#181818</color>
+    <color name="dark_grey">#212121</color>
+    <color name="grey">#373737</color>
+    <color name="silver">#AAAAAA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pink">#F81A5F</color>
+    <color name="dark_pink">#BF0036</color>
+
+    <!--Colors for EditText in SearchFragment-->
+    <color name="et_background_tint">#373737</color>
+    <color name="et_text_color">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_title">28sp</dimen>
+    <dimen name="text_rv_title">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_item_title">22sp</dimen>
+    <dimen name="text_small_title">16sp</dimen>
+
+    <dimen name="padding_fragment_default">20dp</dimen>
+    <dimen name="padding_horizontal_error_btn">10dp</dimen>
+    <dimen name="padding_transparent_navigation_bar">60dp</dimen>
+
+    <dimen name="margin_normal">20dp</dimen>
+    <dimen name="margin_rv_small">10dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_rv_tiny">4dp</dimen>
+
+    <dimen name="rv_title_max_width">120dp</dimen>
+    <dimen name="iv_poster_large_height">180dp</dimen>
+    <dimen name="iv_poster_large_width">120dp</dimen>
+    <dimen name="iv_poster_small_height">135dp</dimen>
+    <dimen name="iv_poster_small_width">90dp</dimen>
+    <dimen name="minHeight_horizontal_rv">240dp</dimen>
+
+
+    <dimen name="corner_radius_error_btn">10dp</dimen>
+    <dimen name="stroke_width_error_btn">1.5dp</dimen>
+    <dimen name="iv_btn_size">28dp</dimen>
+    <dimen name="radius_search_box">15dp</dimen>
+</resources>

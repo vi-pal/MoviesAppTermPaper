@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="people">People</string>
+    <string name="saved_to_favorites">Saved to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="please_turn_on_internet_connection">Please, turn on Internet connection</string>
+    <string name="ok">OK</string>
+    <string name="try_again">Try again</string>
+    <string name="movie_type">movie</string>
+    <string name="person_type">person</string>
+    <string name="imdb">IMDb</string>
+    <string name="votes">Votes</string>
+    <string name="overview">Overview</string>
+    <string name="transition_image">Transition image</string>
+    <string name="transition_name">Transition name</string>
+    <string name="popularity">Popularity</string>
+    <string name="known_for">Known for</string>
+    <string name="example_text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.</string>
+    <string name="empty">Empty</string>
+    <string name="movie">Movie</string>
+    <string name="person">Person</string>
+    <string name="night_mode">Night mode</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloading_list_of_favorites">Downloading list of favorites</string>
+    <string name="saved">Saved</string>
+    <string name="list_is_empty">List is empty</string>
+    <string name="error">Error</string>
+    <string name="download_list">Download list</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="we_got_new_movie_recommendation_for_you">We got new movie recommendation for you!</string>
+</resources>

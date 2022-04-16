@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.details.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Poster -->
+        <ImageView
+            android:id="@+id/iv_poster"
+            style="@style/LargePoster"
+            android:transitionName="@string/transition_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/padding_fragment_default"
+            android:paddingBottom="@dimen/padding_transparent_navigation_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_fragment_default">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/CustomItemTitle"
+                    android:transitionName="@string/transition_name"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_favorites"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Ad Astra Ad Astra Ad Astra Astra Ad Astra" />
+
+                <!-- Button add to favorites -->
+                <ImageView
+                    android:id="@+id/btn_favorites"
+                    style="@style/ImageViewButton"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_favorites_add"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="horizontal">
+
+                <!-- Rating block -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        style="@style/LargeMediumText"
+                        tools:text="6.7" />
+
+                    <TextView
+                        style="@style/SmallText.Light"
+                        android:text="@string/imdb" />
+                </LinearLayout>
+
+                <!-- Votes amount block -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_votes"
+                        style="@style/LargeMediumText"
+                        tools:text="2056" />
+
+                    <TextView
+                        style="@style/SmallText.Light"
+                        android:text="@string/votes" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Release date -->
+            <TextView
+                android:id="@+id/tv_release_date"
+                style="@style/MiddleSemiBoldText"
+                android:layout_marginTop="@dimen/margin_normal"
+                tools:text="12/03/2020" />
+
+            <!-- Overview block -->
+            <TextView
+                style="@style/SmallTitle"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/overview" />
+
+            <TextView
+                android:id="@+id/tv_overview"
+                style="@style/SmallText.Light"
+                android:layout_marginTop="@dimen/margin_rv_small"
+                tools:text="@string/example_text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

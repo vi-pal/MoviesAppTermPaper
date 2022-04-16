@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/rv_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/padding_fragment_default"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/iv_poster"
+        style="@style/RecyclerViewLargeImage"
+        android:transitionName="@string/transition_image"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/RecyclerViewTitle"
+        tools:text="Ad Astra"
+        android:layout_marginTop="@dimen/margin_rv_small"
+        android:transitionName="@string/transition_name"/>
+
+</LinearLayout>

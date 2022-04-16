@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_small">
+
+    <ImageView
+        android:id="@+id/iv_poster"
+        style="@style/RecyclerViewSmallImage"
+        android:transitionName="@string/transition_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/CustomItemTitle.Small"
+        android:layout_margin="@dimen/margin_small"
+        android:transitionName="@string/transition_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ad Astra Ad Astra Ad Astra Ad Astra dvf" />
+
+    <!-- Release date -->
+    <TextView
+        android:id="@+id/tv_release_date"
+        style="@style/SmallText.Light"
+        android:layout_marginTop="@dimen/margin_rv_tiny"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="12/03/2020" />
+
+    <TextView
+        android:id="@+id/tv_imdb"
+        style="@style/SmallText.Bright"
+        android:layout_marginTop="@dimen/margin_rv_small"
+        android:text="@string/imdb"
+        app:layout_constraintStart_toStartOf="@+id/tv_release_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_release_date" />
+
+    <TextView
+        android:id="@+id/tv_rating"
+        style="@style/SmallText.Bright"
+        android:layout_marginStart="@dimen/margin_rv_tiny"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_imdb"
+        app:layout_constraintStart_toEndOf="@+id/tv_imdb"
+        tools:text="6.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_fragment_default"
+        android:orientation="vertical">
+
+        <!-- Movies -->
+        <TextView
+            android:id="@+id/tv_movies"
+            style="@style/CustomTitle"
+            android:text="@string/popular_movies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movies"
+            style="@style/HorizontalRecyclerView"
+            tools:listitem="@layout/item_rv_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movies"/>
+
+        <Button
+            android:id="@+id/btn_error_movies"
+            android:paddingVertical="@dimen/padding_horizontal_error_btn"
+            style="@style/ErrorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movies"
+            app:layout_constraintBottom_toBottomOf="@id/rv_movies"/>
+
+        <ProgressBar
+            android:id="@+id/pb_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movies"
+            app:layout_constraintBottom_toBottomOf="@id/rv_movies" />
+
+        <!-- People -->
+        <TextView
+            android:id="@+id/tv_people"
+            style="@style/CustomTitle"
+            android:text="@string/people"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_movies"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_people"
+            style="@style/HorizontalRecyclerView"
+            tools:listitem="@layout/item_rv_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_people"/>
+
+        <Button
+            android:id="@+id/btn_error_people"
+            android:paddingVertical="@dimen/padding_horizontal_error_btn"
+            style="@style/ErrorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_people"
+            app:layout_constraintBottom_toBottomOf="@id/rv_people"/>
+
+        <ProgressBar
+            android:id="@+id/pb_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_people"
+            app:layout_constraintBottom_toBottomOf="@id/rv_people" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
