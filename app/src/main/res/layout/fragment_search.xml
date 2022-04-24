@@ -11,15 +11,21 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_search"
         style="@style/DefaultTextInputLayout.Colored"
-        android:hint="@string/search"
+        app:hintEnabled="false"
         app:startIconDrawable="@drawable/ic_search">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:backgroundTint="@color/et_background_tint"
             android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:maxLines="1"
+            android:paddingVertical="12dp"
+            android:text="asd"
             android:textColor="@color/et_text_color" />
     </com.google.android.material.textfield.TextInputLayout>
 
