@@ -34,5 +34,8 @@ class DetailsActivity : BaseActivity<ActivityDetailsBinding>() {
             .commit()
     }
 
-//    override fun setAppTheme() {}
+    override fun handleConnectionState() {
+
+    }
+
 }

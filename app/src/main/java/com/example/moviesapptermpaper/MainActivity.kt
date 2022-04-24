@@ -1,6 +1,10 @@
 package com.example.moviesapptermpaper
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.util.Log
 import android.view.LayoutInflater
+import androidx.core.view.isGone
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.data.network.RetrofitService
@@ -18,8 +22,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
         get() = ActivityMainBinding::inflate
 
-//    @Inject lateinit var sharedPreferences: SharedPreferences
-    @Inject lateinit var retrofitService: RetrofitService
+    @Inject
+    lateinit var retrofitService: RetrofitService
 
     override fun onStart() {
         super.onStart()
@@ -33,16 +37,23 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         NavigationUI.setupWithNavController(binding.bottomNavigation, navHostFragment.navController)
     }
 
-    /*@RequiresApi(Build.VERSION_CODES.M)
-    override fun setAppTheme() {
-        val isDark = sharedPreferences.getBoolean(APP_THEME, true)
-        if (isDark) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
-        delegate.applyDayNight()
-    }*/
+    override fun handleConnectionState() {
+        connectionManager.isConnected.observe(this) { isConnected ->
+            Log.d("TAGAA", isConnected.toString())
+            binding.noInternetConnection?.apply {
+                if (isConnected && !isGone) {
+                    animate().translationY(100F).setListener(object : AnimatorListenerAdapter() {
+                        override fun onAnimationEnd(animation: Animator?) {
+                            isGone = true
+                        }
+                    })
+                } else if (!isConnected && isGone) {
+                    animate().translationY(0F).setListener(null)
+                    isGone = false
 
+                }
+            }
+        }
+    }
 }
 
