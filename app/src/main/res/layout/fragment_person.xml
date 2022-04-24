@@ -21,12 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="@dimen/padding_fragment_default"
             android:paddingBottom="@dimen/padding_transparent_navigation_bar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
                 android:orientation="horizontal"
                 android:paddingTop="@dimen/padding_fragment_default">
 
@@ -56,8 +56,10 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/margin_normal"
                 android:gravity="center"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -73,12 +75,15 @@
 
             <TextView
                 style="@style/SmallTitle"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/margin_normal"
                 android:text="@string/known_for" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_movies_known_for"
                 style="@style/HorizontalRecyclerView"
+                android:clipToPadding="false"
+                android:paddingHorizontal="10dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_rv_horizontal" />
         </LinearLayout>

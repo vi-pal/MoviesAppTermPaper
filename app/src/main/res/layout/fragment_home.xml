@@ -10,11 +10,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding_fragment_default"
         android:orientation="vertical">
 
         <!-- Movies -->
         <TextView
+            android:layout_margin="20dp"
             android:id="@+id/tv_movies"
             style="@style/CustomTitle"
             android:text="@string/popular_movies"
@@ -24,6 +24,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_movies"
             style="@style/HorizontalRecyclerView"
+            android:paddingHorizontal="10dp"
+            android:clipToPadding="false"
             tools:listitem="@layout/item_rv_horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,7 @@
             android:id="@+id/tv_people"
             style="@style/CustomTitle"
             android:text="@string/people"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="@dimen/margin_normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rv_movies"/>
@@ -60,6 +63,8 @@
             android:id="@+id/rv_people"
             style="@style/HorizontalRecyclerView"
             tools:listitem="@layout/item_rv_horizontal"
+            android:paddingHorizontal="10dp"
+            android:clipToPadding="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_people"/>
